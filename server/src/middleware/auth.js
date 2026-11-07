@@ -10,7 +10,7 @@ export function setSession(res, user) {
   const token = jwt.sign({ sub: String(user._id) }, config.jwtSecret, { expiresIn: '7d' });
   res.cookie(COOKIE, token, {
     httpOnly: true, // not readable from JavaScript, so XSS cannot steal it
-    sameSite: 'lax', // blocks cross-site form posts
+   
     secure: config.isProd,
     maxAge: WEEK,
     path: '/',
