@@ -7,9 +7,9 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/api': 'http://localhost:5000',
-      '/sitemap.xml': 'http://localhost:5000',
-      '/robots.txt': 'http://localhost:5000',
+      '/api': 'https://bitcrewnet.vercel.app',
+      '/sitemap.xml': 'https://bitcrewnet.vercel.app',
+      '/robots.txt': 'https://bitcrewnet.vercel.app',
     },
   },
   build: {
